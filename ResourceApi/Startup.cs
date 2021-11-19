@@ -22,9 +22,12 @@ namespace ResourceApi
             services.AddAuthentication("Bearer")
                 .AddJwtBearer("Bearer", options =>
                 {
+                    // token-issuing authentication server
                     options.Authority = "https://localhost:44311/";
+                    // can use URI or scope name of a resource the user wants to access
                     options.Audience = "ResourceApi";
 
+                    // allows the caller to specify more advanced options for how JWT tokens will be validated
                     // Returns a 401 response if the scope is not added to the ApiResource
                     //options.TokenValidationParameters = new TokenValidationParameters
                     //{

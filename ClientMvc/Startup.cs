@@ -37,6 +37,7 @@ namespace ClientMvc
                 options.SaveTokens = true;
                 options.ResponseType = "code";
                 // configure cookie cliam mapping
+                // claims may be removed
                 //options.ClaimActions.DeleteClaim("amr");
                 options.ClaimActions.MapUniqueJsonKey("mapjsonkey", "claimtest");
                 // two trips to load cliams in to the cookie so the id token is smaller
@@ -53,6 +54,7 @@ namespace ClientMvc
             services.AddHttpClient();
 
             // more specific than AddMvc()
+            // AddAuthentication needs to added above "MVC" services
             services.AddControllersWithViews();
         }
 

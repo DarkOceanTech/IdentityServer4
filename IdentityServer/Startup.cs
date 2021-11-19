@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace IdentityServer
 {
@@ -20,9 +21,11 @@ namespace IdentityServer
 
         public void ConfigureServices(IServiceCollection services)
         {
+            string connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseInMemoryDatabase("Memory");
+                options.UseInMemoryDatabase(connectionString);
+                //options.UseInMemoryDatabase("Memory");
             });
 
             services.AddIdentity<IdentityUser, IdentityRole>(options =>
@@ -41,13 +44,23 @@ namespace IdentityServer
                 options.LoginPath = "/auth/login";
             });
 
+            string migrationAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
+
             services.AddIdentityServer()
                 .AddAspNetIdentity<IdentityUser>()
-                .AddInMemoryIdentityResources(Config.GetIdentityResources())
-                .AddInMemoryApiScopes(Config.GetApiScopes())
-                .AddInMemoryApiResources(Config.GetApis())
-                .AddInMemoryClients(Config.GetClients())
+                .AddConfigurationStore(options =>
+                {
+                    options.ConfigureDbContext = b => b.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(migrationAssembly));             
+                })
+                .AddOperationalStore(options =>
+                {
+                    options.ConfigureDbContext = b => b.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(migrationAssembly));
+                })
                 .AddDeveloperSigningCredential();
+                //.AddInMemoryIdentityResources(Config.GetIdentityResources())
+                //.AddInMemoryApiScopes(Config.GetApiScopes())
+                //.AddInMemoryApiResources(Config.GetApis())
+                //.AddInMemoryClients(Config.GetClients())
 
             services.AddControllersWithViews();
         }
@@ -62,8 +75,8 @@ namespace IdentityServer
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
-            app.UseIdentityServer();// Includes a call to UseAuthentication, so it’s not necessary to have both.
+            // Includes a call to UseAuthentication, so it’s not necessary to have both.
+            app.UseIdentityServer();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
