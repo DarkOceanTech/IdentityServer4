@@ -57,6 +57,8 @@ namespace IdentityServer
                     AllowedGrantTypes = GrantTypes.Code,
                     // where to redirect to after login
                     RedirectUris = { "https://localhost:44306/signin-oidc" },
+                    PostLogoutRedirectUris = { "https://localhost:44306/Home/Index" },
+                    //AllowedCorsOrigins = { "https://localhost:44306/" },
                     AllowedScopes = { 
                         "ResourceApi",
                         "ClientApi",

@@ -1,0 +1,20 @@
+﻿// Default Connection String
+Data Source=DESKTOP-GBAEC0K;Initial Catalog=OrbitronLive_AuthDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
+
+
+// Instal Entity Framework Core CLI
+dotnet tool install --global dotnet-ef
+dotnet add package Microsoft.EntityFrameworkCore.Design
+
+// Create IdentityServer4 Migrations
+dotnet ef migrations add InitialIdentityServerPersistedGrantDbMigration -c PersistedGrantDbContext -o Data/Migrations/IdentityServer/PersistedGrantDb
+dotnet ef migrations add InitialIdentityServerConfigurationDbMigration -c ConfigurationDbContext -o Data/Migrations/IdentityServer/ConfigurationDb
+
+// Custom Migration Scripts - Dark Ocean Templates
+dotnet ef migrations add InitialIdentityServerApplicationDbMigration -c AppDbContext -o Data/Migrations/ApplicationDB
+dotnet ef database update -c AppDbContext
+dotnet ef database update -c PersistedGrantDbContext
+dotnet ef database update -c ConfigurationDbContext
+
+// Undo the migration
+ef migrations remove

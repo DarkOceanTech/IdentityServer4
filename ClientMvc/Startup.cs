@@ -36,6 +36,7 @@ namespace ClientMvc
                 options.ClientSecret = "client_secret_mvc";
                 options.SaveTokens = true;
                 options.ResponseType = "code";
+                options.SignedOutCallbackPath = "/Home/Index";
                 // configure cookie cliam mapping
                 // claims may be removed
                 //options.ClaimActions.DeleteClaim("amr");

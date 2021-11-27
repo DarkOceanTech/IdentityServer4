@@ -36,8 +36,8 @@ namespace ClientMvc.Controllers
         {
             string accessToken = await HttpContext.GetTokenAsync("access_token");
             // ClientMvc.Startup.cs GetClaimsFromUserInfoEndpoint versus AlwaysIncludeUserClaimsInIdToken
-            // removes the claims fromm the Id Token
-            // primarily foor authentication state
+            // removes the claims from the Id Token
+            // primarily for authentication state
             // sub: authentication info (who and how) versus personal user info
             string idToken = await HttpContext.GetTokenAsync("id_token");
             string refreshToken = await HttpContext.GetTokenAsync("refresh_token");
@@ -51,6 +51,13 @@ namespace ClientMvc.Controllers
             await RefreshAccessToken();
 
             return View();
+        }
+
+        [Authorize]
+        public IActionResult Logout()
+        {
+            // misspelled authentication schemes bring up error page
+            return SignOut("Cookie", "oidc");
         }
 
         public IActionResult Privacy()

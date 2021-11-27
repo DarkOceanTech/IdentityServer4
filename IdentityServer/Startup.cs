@@ -7,6 +7,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
+using Microsoft.Data.SqlClient;
+using IdentityServer4.EntityFramework.Mappers;
+using IdentityServer4.EntityFramework.DbContexts;
+using System.Linq;
 
 namespace IdentityServer
 {
@@ -22,10 +26,11 @@ namespace IdentityServer
         public void ConfigureServices(IServiceCollection services)
         {
             string connectionString = Configuration.GetConnectionString("DefaultConnection");
+            
             services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseInMemoryDatabase(connectionString);
-                //options.UseInMemoryDatabase("Memory");
+                //options.UseSqlServer(connectionString);
+                options.UseInMemoryDatabase("Memory");
             });
 
             services.AddIdentity<IdentityUser, IdentityRole>(options =>
@@ -42,25 +47,26 @@ namespace IdentityServer
             {
                 options.Cookie.Name = "IdentityServer.Cookie";
                 options.LoginPath = "/auth/login";
+                options.LogoutPath = "/auth/logout";
             });
 
             string migrationAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
 
             services.AddIdentityServer()
                 .AddAspNetIdentity<IdentityUser>()
-                .AddConfigurationStore(options =>
-                {
-                    options.ConfigureDbContext = b => b.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(migrationAssembly));             
-                })
-                .AddOperationalStore(options =>
-                {
-                    options.ConfigureDbContext = b => b.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(migrationAssembly));
-                })
+                //.AddConfigurationStore(options =>
+                //{
+                //    options.ConfigureDbContext = b => b.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(migrationAssembly));             
+                //})
+                //.AddOperationalStore(options =>
+                //{
+                //    options.ConfigureDbContext = b => b.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(migrationAssembly));
+                //})
+                .AddInMemoryIdentityResources(Config.GetIdentityResources())
+                .AddInMemoryApiScopes(Config.GetApiScopes())
+                .AddInMemoryApiResources(Config.GetApis())
+                .AddInMemoryClients(Config.GetClients())
                 .AddDeveloperSigningCredential();
-                //.AddInMemoryIdentityResources(Config.GetIdentityResources())
-                //.AddInMemoryApiScopes(Config.GetApiScopes())
-                //.AddInMemoryApiResources(Config.GetApis())
-                //.AddInMemoryClients(Config.GetClients())
 
             services.AddControllersWithViews();
         }

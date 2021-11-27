@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResourceApi", "ResourceApi\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientApi", "ClientApi\ClientApi.csproj", "{D9C1A7BF-CFF7-45F1-8A83-0947E2DC7E6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientMvc", "ClientMvc\ClientMvc.csproj", "{C7F40C4D-449F-46C5-8D9F-53D5A65C852F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientMvc", "ClientMvc\ClientMvc.csproj", "{C7F40C4D-449F-46C5-8D9F-53D5A65C852F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
