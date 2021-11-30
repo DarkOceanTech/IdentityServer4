@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientApi", "ClientApi\Clie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientMvc", "ClientMvc\ClientMvc.csproj", "{C7F40C4D-449F-46C5-8D9F-53D5A65C852F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkOceanIS4.AdminClient", "DarkOceanIS4.AdminClient\DarkOceanIS4.AdminClient.csproj", "{9D0ED346-9B0F-4753-AEAA-AA3314F86263}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C7F40C4D-449F-46C5-8D9F-53D5A65C852F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7F40C4D-449F-46C5-8D9F-53D5A65C852F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7F40C4D-449F-46C5-8D9F-53D5A65C852F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D0ED346-9B0F-4753-AEAA-AA3314F86263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D0ED346-9B0F-4753-AEAA-AA3314F86263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D0ED346-9B0F-4753-AEAA-AA3314F86263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D0ED346-9B0F-4753-AEAA-AA3314F86263}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

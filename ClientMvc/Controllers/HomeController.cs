@@ -32,6 +32,13 @@ namespace ClientMvc.Controllers
         }
 
         [Authorize]
+        public IActionResult Logout()
+        {
+            // misspelled authentication schemes bring up error page
+            return SignOut("Cookie", "oidc");
+        }
+
+        [Authorize]
         public async Task<IActionResult> Secret()
         {
             string accessToken = await HttpContext.GetTokenAsync("access_token");
@@ -51,24 +58,6 @@ namespace ClientMvc.Controllers
             await RefreshAccessToken();
 
             return View();
-        }
-
-        [Authorize]
-        public IActionResult Logout()
-        {
-            // misspelled authentication schemes bring up error page
-            return SignOut("Cookie", "oidc");
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
         public async Task<string> GetSecret(string accessToken)
@@ -102,6 +91,17 @@ namespace ClientMvc.Controllers
             authInfo.Properties.UpdateTokenValue("access_token", tokenRespnse.AccessToken);
             authInfo.Properties.UpdateTokenValue("refresh_token", tokenRespnse.RefreshToken);
             await HttpContext.SignInAsync("Cookie", authInfo.Principal, authInfo.Properties);
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
