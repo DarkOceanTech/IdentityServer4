@@ -29,6 +29,7 @@ namespace DarkOceanIS4.AdminClient
             // AddAuthentication needs to added above "MVC" services
             services.AddControllersWithViews();
 
+            // Make sure a JS engine is registered, or you will get an error!
             services.AddJsEngineSwitcher(options => options.DefaultEngineName = ChakraCoreJsEngine.EngineName)
                 .AddChakraCore();
 
@@ -37,8 +38,7 @@ namespace DarkOceanIS4.AdminClient
 
             // Build the intermediate service provider then return it
             // TODO: research if services.BuildServiceProvider() is required
-            //services.BuildServiceProvider();
-
+            // services.BuildServiceProvider();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -65,6 +65,8 @@ namespace DarkOceanIS4.AdminClient
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
+                // Which is the same as the template
+                //endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

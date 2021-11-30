@@ -1,0 +1,11 @@
+{
+  "name": "darkoceanis4.adminclient",
+  "version": "1.0.0",
+  "description": "IdentityServer4 administrator UI using Reactjs.net and Asp.Net Core",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Bermudez",
+  "license": "ISC"
+}
