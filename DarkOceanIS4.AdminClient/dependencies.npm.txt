@@ -1,0 +1,12 @@
+﻿npm init
+
+npm install react
+npm install react-dom
+npm install react-router-dom
+
+npm install bootstrap
+// npm WARN bootstrap@5.1.3 requires a peer of @popperjs/core@^2.10.2 but none is installed. You must install peer dependencies yourself.
+
+npm install react-bootstrap
+
+npm install react-helmet
