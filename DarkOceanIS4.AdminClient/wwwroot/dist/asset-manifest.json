@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/dist/main.aa68bdba.bundle.js",
+    "main.js": "/dist/main.eb61480a.bundle.js",
     "runtime.js": "/dist/runtime.0909964e.bundle.js",
     "vendor.js": "/dist/vendor.e624fd9a.bundle.js"
   },
   "entrypoints": [
-    "/dist/main.aa68bdba.bundle.js",
+    "/dist/main.eb61480a.bundle.js",
     "/dist/runtime.0909964e.bundle.js",
     "/dist/vendor.e624fd9a.bundle.js"
   ]

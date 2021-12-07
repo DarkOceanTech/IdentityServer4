@@ -9,53 +9,53 @@
  */
 (this["webpackChunkdarkoceanis4_adminclient"] = this["webpackChunkdarkoceanis4_adminclient"] || []).push([["main"],{
 
-/***/ "./src/App.jsx":
-/*!*********************!*\
-  !*** ./src/App.jsx ***!
-  \*********************/
+/***/ "./src/App.js":
+/*!********************!*\
+  !*** ./src/App.js ***!
+  \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/index.js\");\n/* harmony import */ var _components_Navigation_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Navigation.jsx */ \"./src/components/Navigation.jsx\");\n/* harmony import */ var _components_Footer_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Footer.jsx */ \"./src/components/Footer.jsx\");\n/* harmony import */ var _components_Home_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Home.jsx */ \"./src/components/Home.jsx\");\n/* harmony import */ var _components_SecurityToken_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/SecurityToken.jsx */ \"./src/components/SecurityToken.jsx\");\n\n\n\n\n\n //import './App.css';\n\nvar App = function App() {\n  var appMain = /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(_components_Navigation_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Routes, null, /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {\n    path: \"/\",\n    element: /*#__PURE__*/React.createElement(_components_Home_jsx__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null)\n  }), /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {\n    path: \"/security-token-service\",\n    element: /*#__PURE__*/React.createElement(_components_SecurityToken_jsx__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null)\n  }), /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {\n    path: \"*\",\n    component: function component(_ref) {\n      var staticContext = _ref.staticContext;\n      if (staticContext) staticContext.status = 404;\n      return /*#__PURE__*/React.createElement(\"h1\", null, \"Not Found :(\");\n    }\n  })), /*#__PURE__*/React.createElement(_components_Footer_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null));\n\n  if (typeof window === 'undefined') {\n    return /*#__PURE__*/React.createElement(React.Fragment, null, \"error\");\n  }\n\n  return /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.BrowserRouter, null, appMain);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n//# sourceURL=webpack://darkoceanis4.adminclient/./src/App.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/index.js\");\n/* harmony import */ var _components_Navigation_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Navigation.js */ \"./src/components/Navigation.js\");\n/* harmony import */ var _components_Footer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Footer.js */ \"./src/components/Footer.js\");\n/* harmony import */ var _components_Home_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Home.js */ \"./src/components/Home.js\");\n/* harmony import */ var _components_SecurityToken_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/SecurityToken.js */ \"./src/components/SecurityToken.js\");\n\n\n\n\n //import './App.css';\n\nvar App = function App() {\n  var appMain = /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(_components_Navigation_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"], null), /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Routes, null, /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Route, {\n    path: \"/\",\n    element: /*#__PURE__*/React.createElement(_components_Home_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null)\n  }), /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Route, {\n    path: \"/security-token-service\",\n    element: /*#__PURE__*/React.createElement(_components_SecurityToken_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null)\n  })), /*#__PURE__*/React.createElement(_components_Footer_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null));\n\n  if (typeof window === 'undefined') {\n    return /*#__PURE__*/React.createElement(React.Fragment, null, \"Initializing...\");\n  }\n\n  return /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.BrowserRouter, null, appMain);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n//# sourceURL=webpack://darkoceanis4.adminclient/./src/App.js?");
 
 /***/ }),
 
-/***/ "./src/components/Footer.jsx":
-/*!***********************************!*\
-  !*** ./src/components/Footer.jsx ***!
-  \***********************************/
+/***/ "./src/components/Footer.js":
+/*!**********************************!*\
+  !*** ./src/components/Footer.js ***!
+  \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\nvar Footer = function Footer() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, \"Footer\");\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);\n\n//# sourceURL=webpack://darkoceanis4.adminclient/./src/components/Footer.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\nvar Footer = function Footer() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, \"Footer\");\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);\n\n//# sourceURL=webpack://darkoceanis4.adminclient/./src/components/Footer.js?");
 
 /***/ }),
 
-/***/ "./src/components/Home.jsx":
-/*!*********************************!*\
-  !*** ./src/components/Home.jsx ***!
-  \*********************************/
+/***/ "./src/components/Home.js":
+/*!********************************!*\
+  !*** ./src/components/Home.js ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\nvar Home = function Home() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, \"Home\");\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);\n\n//# sourceURL=webpack://darkoceanis4.adminclient/./src/components/Home.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\nvar Home = function Home() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, \"Home\");\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);\n\n//# sourceURL=webpack://darkoceanis4.adminclient/./src/components/Home.js?");
 
 /***/ }),
 
-/***/ "./src/components/Navigation.jsx":
-/*!***************************************!*\
-  !*** ./src/components/Navigation.jsx ***!
-  \***************************************/
+/***/ "./src/components/Navigation.js":
+/*!**************************************!*\
+  !*** ./src/components/Navigation.js ***!
+  \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/index.js\");\n\n\n\nvar Navigation = function Navigation() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"nav\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {\n    to: \"/\"\n  }, \"Admin Home\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {\n    to: \"/security-token-service\"\n  }, \"Security Token\"));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Navigation);\n\n//# sourceURL=webpack://darkoceanis4.adminclient/./src/components/Navigation.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/index.js\");\n\n\n\nvar Navigation = function Navigation() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"nav\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {\n    to: \"/\"\n  }, \"Admin Home\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {\n    to: \"/security-token-service\"\n  }, \"Security Token\"));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Navigation);\n\n//# sourceURL=webpack://darkoceanis4.adminclient/./src/components/Navigation.js?");
 
 /***/ }),
 
-/***/ "./src/components/SecurityToken.jsx":
-/*!******************************************!*\
-  !*** ./src/components/SecurityToken.jsx ***!
-  \******************************************/
+/***/ "./src/components/SecurityToken.js":
+/*!*****************************************!*\
+  !*** ./src/components/SecurityToken.js ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\nvar SecurityToken = function SecurityToken() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, \"Security Token Service\");\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SecurityToken);\n\n//# sourceURL=webpack://darkoceanis4.adminclient/./src/components/SecurityToken.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\nvar SecurityToken = function SecurityToken() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, \"Security Token Service\");\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SecurityToken);\n\n//# sourceURL=webpack://darkoceanis4.adminclient/./src/components/SecurityToken.js?");
 
 /***/ }),
 
@@ -65,7 +65,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom/server */ \"./node_modules/react-dom/server.browser.js\");\n/* harmony import */ var _App_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App.jsx */ \"./src/App.jsx\");\n\n\n\n //import { Helmet, HelmetProvider } from 'react-helmet-async';\n\n__webpack_require__.g.React = react__WEBPACK_IMPORTED_MODULE_0__;\n__webpack_require__.g.ReactDOM = react_dom__WEBPACK_IMPORTED_MODULE_1__;\n__webpack_require__.g.ReactDOMServer = react_dom_server__WEBPACK_IMPORTED_MODULE_2__; //global.Helmet = { Helmet, HelmetProvider };\n\n__webpack_require__.g.Components = {\n  RootComponent: _App_jsx__WEBPACK_IMPORTED_MODULE_3__[\"default\"]\n};\n\n//# sourceURL=webpack://darkoceanis4.adminclient/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom/server */ \"./node_modules/react-dom/server.browser.js\");\n/* harmony import */ var _App_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App.js */ \"./src/App.js\");\n\n\n\n //import { Helmet, HelmetProvider } from 'react-helmet-async';\n\n__webpack_require__.g.React = react__WEBPACK_IMPORTED_MODULE_0__;\n__webpack_require__.g.ReactDOM = react_dom__WEBPACK_IMPORTED_MODULE_1__;\n__webpack_require__.g.ReactDOMServer = react_dom_server__WEBPACK_IMPORTED_MODULE_2__; //global.Helmet = { Helmet, HelmetProvider };\n\n__webpack_require__.g.Components = {\n  RootComponent: _App_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]\n};\n\n//# sourceURL=webpack://darkoceanis4.adminclient/./src/index.js?");
 
 /***/ }),
 

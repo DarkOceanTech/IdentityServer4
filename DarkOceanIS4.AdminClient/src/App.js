@@ -1,9 +1,8 @@
-﻿import { Component } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navigation from "./components/Navigation.jsx";
-import Footer from "./components/Footer.jsx";
-import Home from "./components/Home.jsx";
-import SecurityToken from "./components/SecurityToken.jsx";
+﻿import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navigation from "./components/Navigation.js";
+import Footer from "./components/Footer.js";
+import Home from "./components/Home.js";
+import SecurityToken from "./components/SecurityToken.js";
 //import './App.css';
 
 const App = () => {
@@ -21,7 +20,7 @@ const App = () => {
 
         if (typeof window === 'undefined') {
             return (
-                <>error</>
+                <>Initializing...</>
             );
         }
         return <Router>{appMain}</Router>;
