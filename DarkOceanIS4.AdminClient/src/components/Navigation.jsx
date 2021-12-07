@@ -5,9 +5,9 @@ const Navigation = () => {
     return (
         <nav>
             <Link to='/'>Admin Home</Link>
-            <Link to='/about'>Security Token</Link>
+            <Link to='/security-token-service'>Security Token</Link>
         </nav>
     )
 }
 
-export default Navigation
+export default Navigation;

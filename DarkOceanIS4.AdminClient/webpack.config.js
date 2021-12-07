@@ -41,7 +41,7 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.js?$/,
+            test: /\.jsx?$/,
             exclude: /node_modules/,
             loader: 'babel-loader'
         }]
@@ -51,7 +51,7 @@ module.exports = {
             // Specifies the file name to use for the resulting manifest.
             // By default the plugin will emit manifest.json to your output directory.
             // Passing an absolute path to the fileName option will override both the file name and path.
-            fileName: 'manifest.json',
+            fileName: 'asset-manifest.json',
             // A custom Function to create the manifest. The passed function should match the signature of
             // (seed: Object, files: FileDescriptor[], entries: string[]) => Object and can return anything as long as it's serialisable by JSON.stringify.
             // Seed: A cache of key/value pairs to used to seed the manifest. This may include a set of custom key/value pairs to include in your manifest,
