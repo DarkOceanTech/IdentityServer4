@@ -1,0 +1,16 @@
+﻿@using React.AspNet
+<!DOCTYPE html>
+<html>
+<head>
+    @Html.Raw(ViewBag.HelmetTitle)
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+    @Html.ReactGetStylePaths()
+</head>
+<body>
+    @RenderBody()
+    @Html.ReactGetScriptPaths()
+    @Html.ReactInitJavaScript()
+</body>
+</html>

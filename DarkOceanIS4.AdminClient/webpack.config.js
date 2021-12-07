@@ -1,5 +1,5 @@
 ﻿const path = require('path');
-const { ManifestPlugin } = reqire('webpack-manifest-plugin');
+const { WebpackManifestPlugin  } = require('webpack-manifest-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -41,13 +41,13 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.jsx?$/,
+            test: /\.js?$/,
             exclude: /node_modules/,
             loader: 'babel-loader'
         }]
     },
     plugins: [
-        new ManifestPlugin({
+        new WebpackManifestPlugin ({
             // Specifies the file name to use for the resulting manifest.
             // By default the plugin will emit manifest.json to your output directory.
             // Passing an absolute path to the fileName option will override both the file name and path.
