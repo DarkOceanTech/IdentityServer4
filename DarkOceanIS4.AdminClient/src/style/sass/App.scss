@@ -1,0 +1,19 @@
+﻿@import 'Navigation';
+
+$primary-color: red;
+$secondary-color: blue;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.text-primary {
+    color: $primary-color;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+

@@ -3,11 +3,9 @@ import Navigation from "./components/Navigation.js";
 import Footer from "./components/Footer.js";
 import Home from "./components/Home.js";
 import SecurityToken from "./components/SecurityToken.js";
-//import './App.css';
 
 const App = () => {
-
-      const appMain = (
+      const app = (
             <div>
                 <Navigation />
                 <Routes>
@@ -23,7 +21,7 @@ const App = () => {
                 <>Initializing...</>
             );
         }
-        return <Router>{appMain}</Router>;
+        return <Router>{app}</Router>;
     }
 
 export default App;

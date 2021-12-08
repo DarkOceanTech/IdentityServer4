@@ -1,8 +1,11 @@
 ﻿const path = require('path');
-const { WebpackManifestPlugin  } = require('webpack-manifest-plugin');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+// My issue was that I was using "webpack-fix-style-only-entries" but it is not compatible with Webpack 5. Instead, I switched to webpack-remove-empty-scripts.
+//const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 
 module.exports = {
-    entry: './src/index.js',
+    entry: ['./src/index.js', './src/style/sass/App.scss'],
     output: {
         // Combining multiple substitutions: [entry name].[hashes generated from the generated content]
         // The length of hashes ([hash], [contenthash] or [chunkhash]) can be specified using [hash:16] (defaults to 20)
@@ -40,13 +43,28 @@ module.exports = {
         }
     },
     module: {
-        rules: [{
-            test: /\.js?$/,
+        rules: [
+        {
+        test: /\.js?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+        },
+        {
+            test: /\.scss$/,
             exclude: /node_modules/,
-            loader: 'babel-loader'
-        }]
+            use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+        }
+        //{
+        //    test: /\.scss$/,
+        //    use: ["style-loader","css-loader","sass-loader"]
+        //}
+      ]
     },
     plugins: [
+        //new FixStyleOnlyEntriesPlugin(),
+        new MiniCssExtractPlugin({
+            filename: "App.[contenthash:8].css"
+        }),
         new WebpackManifestPlugin ({
             // Specifies the file name to use for the resulting manifest.
             // By default the plugin will emit manifest.json to your output directory.

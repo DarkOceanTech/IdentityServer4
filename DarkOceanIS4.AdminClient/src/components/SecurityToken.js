@@ -1,8 +1,9 @@
-﻿import React from 'react'
+﻿import React from 'react';
+
 
 const SecurityToken = () => {
     return (
-        <div>
+        <div className='text-secondary'>
             Security Token Service
         </div>
     )

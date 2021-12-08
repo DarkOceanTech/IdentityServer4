@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Navigation = () => {
     return (
-        <nav>
+        <nav className='nav'>
             <Link to='/'>Admin Home</Link>
             <Link to='/security-token-service'>Security Token</Link>
         </nav>

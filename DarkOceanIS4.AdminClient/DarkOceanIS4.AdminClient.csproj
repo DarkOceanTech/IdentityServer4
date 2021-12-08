@@ -27,11 +27,8 @@
 
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="src\style\styled-components\" />
     <Folder Include="wwwroot\dist\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\App.css" />
   </ItemGroup>
 
 </Project>
