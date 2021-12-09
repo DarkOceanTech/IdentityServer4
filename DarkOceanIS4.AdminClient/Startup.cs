@@ -55,6 +55,7 @@ namespace DarkOceanIS4.AdminClient
                     .SetReuseJavaScriptEngines(true)
                     .SetLoadBabel(false)
                     .SetLoadReact(false)
+                    //.AddScriptWithoutTransform("~/lib/bootstrap/dist/js/bootstrap.min.js")
                     .SetReactAppBuildPath("~/dist");
             });
 

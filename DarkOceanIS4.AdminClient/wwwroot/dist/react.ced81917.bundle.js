@@ -7,7 +7,7 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-(this["webpackChunkdarkoceanis4_adminclient"] = this["webpackChunkdarkoceanis4_adminclient"] || []).push([["vendor"],{
+(this["webpackChunkdarkoceanis4_adminclient"] = this["webpackChunkdarkoceanis4_adminclient"] || []).push([["react"],{
 
 /***/ "./node_modules/react-dom/cjs/react-dom-server.browser.development.js":
 /*!****************************************************************************!*\

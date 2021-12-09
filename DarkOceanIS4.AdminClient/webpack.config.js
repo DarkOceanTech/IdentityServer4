@@ -5,7 +5,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 //const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 
 module.exports = {
-    entry: ['./src/index.js', './src/style/sass/App.scss'],
+    entry: {
+        main: ['./src/index.js', './src/style/sass/App.scss'],
+        //bootstrap: ['./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', './node_modules/bootstrap/dist/css/bootstrap.min.css'],
+        //react_bootstrap: ['','']
+    },
     output: {
         // Combining multiple substitutions: [entry name].[hashes generated from the generated content]
         // The length of hashes ([hash], [contenthash] or [chunkhash]) can be specified using [hash:16] (defaults to 20)
@@ -36,7 +40,7 @@ module.exports = {
                 // https://github.com/webpack/analyse
                 commons: {
                     test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
-                    name: 'vendor',
+                    name: 'react',
                     chunks: 'all'
                 }
             }
@@ -45,25 +49,25 @@ module.exports = {
     module: {
         rules: [
         {
-        test: /\.js?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader'
         },
         {
-            test: /\.scss$/,
-            exclude: /node_modules/,
-            use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+        test: /\.(scss|css)$/i,
+        exclude: /node_modules/,
+        use: [
+            MiniCssExtractPlugin.loader,
+            "css-loader",
+            "sass-loader"
+          ]
         }
-        //{
-        //    test: /\.scss$/,
-        //    use: ["style-loader","css-loader","sass-loader"]
-        //}
       ]
     },
     plugins: [
         //new FixStyleOnlyEntriesPlugin(),
         new MiniCssExtractPlugin({
-            filename: "App.[contenthash:8].css"
+            filename: "[name].[contenthash:8].css"
         }),
         new WebpackManifestPlugin ({
             // Specifies the file name to use for the resulting manifest.

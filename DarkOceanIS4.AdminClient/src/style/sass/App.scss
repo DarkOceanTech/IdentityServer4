@@ -1,19 +1,28 @@
 ﻿@import 'Navigation';
 
-$primary-color: red;
-$secondary-color: blue;
+$app-bg-dark: #0a0909;
+$primary-color: #7e2020;
+$secondary-color: c70c0c;
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+body {
+    height: calc(100vh - 139px);
+    position: relative;
+}
 
-.text-primary {
+.app-bg-dark {
+    background-color: $app-bg-dark;
+}
+
+.text-color-primary {
     color: $primary-color;
 }
 
-.text-secondary {
+.text-color-secondary {
     color: $secondary-color;
 }
 

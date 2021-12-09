@@ -13,10 +13,19 @@
   padding: 0;
 }
 
-.text-primary {
-  color: red;
+body {
+  height: calc(100vh - 139px);
+  position: relative;
 }
 
-.text-secondary {
-  color: blue;
+.app-bg-dark {
+  background-color: #0a0909;
+}
+
+.text-color-primary {
+  color: #7e2020;
+}
+
+.text-color-secondary {
+  color: c70c0c;
 }

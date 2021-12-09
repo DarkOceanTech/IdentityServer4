@@ -3,7 +3,7 @@
 
 const SecurityToken = () => {
     return (
-        <div className='text-secondary'>
+        <div className='text-color-secondary'>
             Security Token Service
         </div>
     )

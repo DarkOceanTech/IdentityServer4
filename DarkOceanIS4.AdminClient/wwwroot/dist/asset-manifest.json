@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/dist/App.76b61f11.css",
-    "main.js": "/dist/main.04653e2d.bundle.js",
+    "main.css": "/dist/main.359aa21b.css",
+    "main.js": "/dist/main.9678b4a0.bundle.js",
     "runtime.js": "/dist/runtime.02768dd3.bundle.js",
-    "vendor.js": "/dist/vendor.e624fd9a.bundle.js"
+    "react.js": "/dist/react.ced81917.bundle.js"
   },
   "entrypoints": [
-    "/dist/App.76b61f11.css",
-    "/dist/main.04653e2d.bundle.js",
+    "/dist/main.359aa21b.css",
+    "/dist/main.9678b4a0.bundle.js",
     "/dist/runtime.02768dd3.bundle.js",
-    "/dist/vendor.e624fd9a.bundle.js"
+    "/dist/react.ced81917.bundle.js"
   ]
 }
