@@ -5,7 +5,8 @@ const Footer = () => {
     let location = useLocation();
 
     return (
-        <footer className={`py-3 app-bg-dark ${location.pathname === "/" || location.pathname === "/security-token-service" ? "fixed-bottom" : ""}`}>
+        //<footer className={`py-3 app-bg-dark ${location.pathname === "/" || location.pathname === "/security-token-service" ? "fixed-bottom" : ""}`}>
+            <footer className="py-3 app-bg-dark fixed-bottom">
             <div className="container">
                 <p className="m-0 text-center text-white">
                     Copyright &copy; Dark Moon 2021

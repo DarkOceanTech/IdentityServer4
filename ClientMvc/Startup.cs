@@ -55,7 +55,7 @@ namespace ClientMvc
             services.AddHttpClient();
 
             // more specific than AddMvc()
-            // AddAuthentication needs to added above "MVC" services
+            // AddAuthentication needs to be added above "MVC" services
             services.AddControllersWithViews();
         }
 

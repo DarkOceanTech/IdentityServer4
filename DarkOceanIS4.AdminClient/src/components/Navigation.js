@@ -2,24 +2,21 @@
 import { Link, NavLink } from 'react-router-dom';
 //import Navbar from 'react-bootstrap/Navbar';
 
-const Navigation = ({ login }) => {
+const Navigation = ({ logout }) => {
+    const isActiveCss = "border-bottom border-3 border-danger text-white mx-2 text-decoration-none";
+    const notActiveCss = "text-white mx-2 text-decoration-none";
     return (
         <nav className="navbar navbar-expand-lg navbar-dark app-bg-dark">
             <div className="container-fluid">
-                <Link className="navbar-brand mx-auto" to="/">
+                <Link className="navbar-brand ms-3" to="/">
                     Dark Moon Security
                 </Link>
 
-                <div className="navbar-nav mx-auto">
-                    <NavLink className={({ isActive }) => isActive ? "border-bottom border-3 border-danger text-white mx-2 text-decoration-none" : "text-white mx-2 text-decoration-none"} to="/">IdentityServer Admin</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? "border-bottom border-3 border-danger text-white mx-2 text-decoration-none" : "text-white mx-2 text-decoration-none"} to='/security-token-service'>IdentityServer</NavLink>
-                </div>
-
-                <div className="navbar-nav mx-auto">
+                <div className="navbar-nav me-3">
                     <Link className="btn text-white" to="/">
                         Help
                     </Link>
-                    <Link className="btn text-secondary" to="/" onClick={() => login()}>
+                    <Link className="btn text-secondary" to="/" onClick={() => logout()}>
                         Sign out
                     </Link>
                 </div>

@@ -1,55 +1,46 @@
-﻿import React from 'react'
+﻿import React, { useSate, useState } from 'react'
 
 const Login = ({ login }) => {
+    const [email, setUsername] = useState();
+    const [password, setPassword] = useState();
+    const [isValidated, setIsValidated] = useState(false);
 
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    const handleSubmit = () => {
-
+    const handleSubmit = (e) => {
+        e.preventDefault();
         login();
 
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        //var forms = document.querySelectorAll('.needs-validation')
+        darkMoonValidateForm();      
+    }
 
-        //// Loop over them and prevent submission
-        //Array.prototype.slice.call(forms)
-        //    .forEach(function (form) {
-        //        form.addEventListener('submit', function (event) {
-        //            if (!form.checkValidity()) {
-        //                event.preventDefault()
-        //                event.stopPropagation()
-        //            }
-
-        //            form.classList.add('was-validated')
-        //        }, false)
-        //    })
-
-
+    const darkMoonValidateForm = () => {
+        setIsValidated(true);
     }
 
     return (
-        <div className="position-absolute top-50 start-50 translate-middle">
-            <h1 className="pb-2">Dark Moon Security Admin</h1>
-            <form className="border border-1 border-dark p-3 needs-validation" noValidate onSubmit={handleSubmit}>
+        <div className="position-absolute top-50 start-50 translate-middle login-bg">
+            <h1 className="pb-5 text-secondary">Dark Moon Security Portal</h1>
+            <form className="border border-1 border-secondary p-3 rounded login-form" noValidate onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label className="visually-hidden">Email</label>
-                    <div className="input-group has-validation">
+                    <div className="input-group">
                         <div className="input-group-text"><i className="fas fa-user"></i></div>
-                        <input type="email" className="form-control" placeholder="Enter your email..." required />
-                        <div className="invalid-feedback">
+                        <input type="email" className="form-control" placeholder="Enter your email..." required onChange={e => setUsername(e.target.value)}/>
+                        <div className={isValidated ? "error-message" : "hidden"}>
                             Please enter a valid email.
                         </div>
                     </div>
                 </div>
                 <div className="mb-3">
                     <label className="visually-hidden">Password</label>
-                    <div className="input-group has-validation">
+                    <div className="input-group">
                         <div className="input-group-text"><i className="fas fa-lock"></i></div>
-                        <input type="text" className="form-control" placeholder="Enter your password..." required />
-                        <div className="invalid-feedback">
+                        <input type="text" className="form-control" placeholder="Enter your password..." required onChange={e => setPassword(e.target.value)}/>
+                        <div className={isValidated ? "error-message" : "hidden"}>
                             Please enter a valid password.
                         </div>
                     </div>
                 </div>
+                {/*<button type="submit" className="btn btn-danger w-100" disabled={!email || !password}>Sign in</button>*/}
                 <button type="submit" className="btn btn-danger w-100">Sign in</button>
             </form>
         </div>

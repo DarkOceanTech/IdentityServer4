@@ -78,7 +78,7 @@ namespace IdentityServer.Controllers
             {
                 return View(registerViewModel);
             }
-            IdentityUser user = new IdentityUser(registerViewModel.Email);
+            IdentityUser user = new(registerViewModel.Email);
             IdentityResult result = await _userManager.CreateAsync(user, registerViewModel.Password);
 
             if (result.Succeeded)

@@ -1,4 +1,5 @@
 ﻿@import 'Navigation';
+@import '_DarkMoonValidation';
 
 $app-bg-dark: #0a0909;
 $primary-color: #7e2020;
@@ -10,8 +11,12 @@ $secondary-color: c70c0c;
     padding: 0;
 }
 body {
-    height: calc(100vh - 139px);
+    background-color: darkgray;
+    background-image: url("../../../wwwroot/lib/assets/darkmoon-bg.jpg");
+    background-size: cover;
+
     position: relative;
+    height: calc(100vh - 139px);
 }
 
 .app-bg-dark {
@@ -24,5 +29,19 @@ body {
 
 .text-color-secondary {
     color: $secondary-color;
+}
+
+/* Login Page */
+
+.login-form {
+    /*   -moz-box-shadow: 0 0 5px 5px #0a0909;
+    -webkit-box-shadow: 0 0 5px 5px #0a0909;
+    box-shadow: 0 0 5px 5px #0a0909;*/
+    background-color: whitesmoke;
+    box-shadow: inset 0 0 5px #0a0909;
+}
+
+.login-bg {
+    /*background-image: url("../../../wwwroot/lib/assets/darkmoon-bg.jpg");*/
 }
 

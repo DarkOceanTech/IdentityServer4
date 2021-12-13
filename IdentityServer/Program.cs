@@ -21,7 +21,6 @@ namespace IdentityServer
                 UserManager<IdentityUser> userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
 
                 IdentityUser user = new("testuser");
-                //IdentityUser user = new IdentityUser("testuser");
                 userManager.CreateAsync(user, "password").GetAwaiter().GetResult();
                 // added to Identity Token
                 userManager.AddClaimAsync(user, new Claim("claimtest", "claimtest.cookie")).GetAwaiter().GetResult();

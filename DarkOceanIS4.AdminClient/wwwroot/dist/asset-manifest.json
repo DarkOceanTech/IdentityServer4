@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/dist/main.359aa21b.css",
-    "main.js": "/dist/main.9678b4a0.bundle.js",
+    "main.css": "/dist/main.d6743969.css",
+    "main.js": "/dist/main.5b07be27.bundle.js",
     "runtime.js": "/dist/runtime.02768dd3.bundle.js",
-    "react.js": "/dist/react.ced81917.bundle.js"
+    "react.js": "/dist/react.ced81917.bundle.js",
+    "darkmoon-bg.jpg": "/dist/29eda6f05f093a1d51fc.jpg"
   },
   "entrypoints": [
-    "/dist/main.359aa21b.css",
-    "/dist/main.9678b4a0.bundle.js",
+    "/dist/main.d6743969.css",
+    "/dist/main.5b07be27.bundle.js",
     "/dist/runtime.02768dd3.bundle.js",
     "/dist/react.ced81917.bundle.js"
   ]

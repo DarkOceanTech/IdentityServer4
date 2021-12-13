@@ -7,6 +7,23 @@
   justify-content: space-around;
 }
 
+.according-section-header {
+  color: gray;
+}
+
+.side-nav {
+  width: 200px;
+}
+
+/* Login process */
+.error-message {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,8 +31,11 @@
 }
 
 body {
-  height: calc(100vh - 139px);
+  background-color: darkgray;
+  background-image: url(/dist/29eda6f05f093a1d51fc.jpg);
+  background-size: cover;
   position: relative;
+  height: calc(100vh - 139px);
 }
 
 .app-bg-dark {
@@ -28,4 +48,17 @@ body {
 
 .text-color-secondary {
   color: c70c0c;
+}
+
+/* Login Page */
+.login-form {
+  /*   -moz-box-shadow: 0 0 5px 5px #0a0909;
+  -webkit-box-shadow: 0 0 5px 5px #0a0909;
+  box-shadow: 0 0 5px 5px #0a0909;*/
+  background-color: whitesmoke;
+  box-shadow: inset 0 0 5px #0a0909;
+}
+
+.login-bg {
+  /*background-image: url("../../../wwwroot/lib/assets/darkmoon-bg.jpg");*/
 }
