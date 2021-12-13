@@ -54,7 +54,6 @@ namespace ClientMvc
 
             services.AddHttpClient();
 
-            // more specific than AddMvc()
             // AddAuthentication needs to be added above "MVC" services
             services.AddControllersWithViews();
         }
@@ -82,8 +81,6 @@ namespace ClientMvc
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
-                // Which is the same as the template
-                //endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

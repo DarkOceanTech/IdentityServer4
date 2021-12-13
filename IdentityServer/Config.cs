@@ -72,6 +72,30 @@ namespace IdentityServer
                     
                     AllowOfflineAccess = true,
                     RequireConsent = false
+                },
+                // interactive ASP.NET Core MVC client
+                new Client {
+                    ClientId = "client_id_mvc_react",
+                    ClientSecrets = { new Secret("client_secret_mvc_react".ToSha256()) },
+                    // Authorization Code Flow with PKCE
+                    AllowedGrantTypes = GrantTypes.Code,
+                    // where to redirect to after login
+                    RedirectUris = { "https://localhost:44306/signin-oidc" },
+                    PostLogoutRedirectUris = { "https://localhost:44306/Home/Index" },
+                    //AllowedCorsOrigins = { "https://localhost:44306/" },
+                    AllowedScopes = {
+                        "ResourceApi",
+                        "ClientApi",
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "testscope",
+                    },
+                    // test to get all claims into the Id Token refer to ClientMvc.Statup.cs
+                    // ConfigureServices GetClaimsFromUserInfoEndpoint
+                    // AlwaysIncludeUserClaimsInIdToken = true,
+                    
+                    AllowOfflineAccess = true,
+                    RequireConsent = false
                 }
             };
     }
